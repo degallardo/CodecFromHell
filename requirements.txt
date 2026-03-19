@@ -1,0 +1,7 @@
+# Root dependencies for CodecFromHell
+# Install with: pip install -r requirements.txt
+
+-r automation/requirements.txt
+
+# Runtime prerequisite (not a pip package):
+# - ffmpeg executable available in PATH (required by hxvs_converter.py)
