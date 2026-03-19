@@ -1,0 +1,17 @@
+{
+  "storage_connection_string": "DefaultEndpointsProtocol=https;AccountName=<account>;AccountKey=<key>;EndpointSuffix=core.windows.net",
+  "queue_name": "video-convert-jobs",
+  "table_name": "ConversionJobs",
+  "batch_id": "batch-20260314-01",
+  "source_root": "C:/data/downloaded_264",
+  "output_root": "C:/data/converted_mp4",
+  "container": "mp4",
+  "ffmpeg_path": null,
+  "overwrite": false,
+  "poll_seconds": 5,
+  "visibility_timeout": 300,
+  "max_attempts": 5,
+  "worker_id": "worker-laptop-01",
+  "uploader_command": null,
+  "verify_command": null
+}
