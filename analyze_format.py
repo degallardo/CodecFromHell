@@ -1,4 +1,7 @@
-import struct, sys, os
+import argparse
+import os
+import struct
+import sys
 
 def analyze(filepath):
     with open(filepath, 'rb') as f:
@@ -68,5 +71,21 @@ def analyze(filepath):
     print(f"Payload size range: {min(payload_sizes)} - {max(payload_sizes)}")
     print()
 
-analyze(r'C:\Users\sesa443933\Videos\Borrar\P241223_142018_143018.264')
-analyze(r'C:\Users\sesa443933\Videos\Borrar\P241223_143018_144017.264')
+def main():
+    parser = argparse.ArgumentParser(description="Inspect HXVS/HXVF structure from .264 files")
+    parser.add_argument("inputs", nargs="+", help="One or more .264 files to analyze")
+    args = parser.parse_args()
+
+    exit_code = 0
+    for path_text in args.inputs:
+        try:
+            analyze(path_text)
+        except Exception as error:
+            print(f"ERROR analyzing {path_text}: {error}", file=sys.stderr)
+            exit_code = 1
+
+    raise SystemExit(exit_code)
+
+
+if __name__ == "__main__":
+    main()
