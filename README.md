@@ -133,3 +133,7 @@ If possible, include:
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE).
+
+## AI Assistance Notice
+
+Parts of this repository (including code and documentation) were created with AI assistance and then reviewed and validated by a human before publication.
